@@ -56,17 +56,31 @@
 //     return parseInt(String(n).split('').sort().reverse().join(''))
 // }
 // console.log(descendingOrder(123456789))
-function isIsogram(str) {
-    let a = str.toLowerCase().split('')
-    if (a.length <= 1) return true
-
-    if (a.length > Array.from(new Set(a)).length) {
-        return false
-    }
-    return true
+// function isIsogram(str) {
+//     let a = str.toLowerCase().split('')
+//     if (a.length <= 1) return true
+//
+//     if (a.length > Array.from(new Set(a)).length) {
+//         return false
+//     }
+//     return true
+// }
+//
+//  console.log(
+// isIsogram("aba")
+//  )
+// function isIsogram(str){
+//     return new Set(str.toUpperCase()).size == str.length;
+// }
+function calc(x) {
+    let array = x.split('')
+    let result = array.map(e => e.charCodeAt(0)).join('').split('')
+    let result2 = result.map(e => {
+        return e == 7 ? '1' : e
+    })
+    return Number(result.join('')) - Number(result2.join(''))
 }
 
- console.log(
-isIsogram("aba")
- )
-
+console.log(
+    calc('ABC')
+)
