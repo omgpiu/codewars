@@ -104,5 +104,50 @@
 //     return Math.abs(catX-mX)+Math.abs(catY-mY)<=moves?'Caught!':'Escaped!'
 // }
 
-const flatter = arr => arr.reduce((arr, el)=> Array.isArray(el)? flatter([...arr,...el]) : [...arr,el],[])
-console.log(flatter(["a", "b", ["c", "d", ["e", ["f"]]], "g", ["h"]]))
+// const flatter = arr => arr.reduce((arr, el)=> Array.isArray(el)? flatter([...arr,...el]) : [...arr,el],[])
+// console.log(flatter(["a", "b", ["c", "d", ["e", ["f"]]], "g", ["h"]]))
+// Реализовать функцию, которая валидирует скобки
+//  '([]())[]' - valid
+//  '[]]()' - wrong
+//  '([)]' - wrong
+
+// Выбираем первый символ строки
+// Если это открывающая скобка - помещаем ее в стек
+// Если это закрывающая скобка, извлекаем последнее значение из стека и проверяем скобки на соответствие. Если стек пуст или закрывающая скобка не соответствует открывающей - прерываем выполнение и возвращаем false
+// Переходим к следующему символу строки и повторяем действия с п.2
+// Если по окончании выполнения алгоритма стек не пуст (это возможно, если открывающих скобок больше, чем закрывающих) - возвращаем false.
+// const test = function (str) {
+//     let chars = str.split(''),
+//         stack = [],
+//         open = ['{', '(', '['],
+//         close = ['}', ')', ']'],
+//         closeIndex,
+//         openIndex;
+//
+//     // Проходимся по строке, проверяя каждый ее символ
+//     for (let i = 0; i < chars.length; i++) {
+//         openIndex = open.indexOf(chars[i]);
+//         if (openIndex !== -1) {
+//             // Нашли открывающую скобку. Помещаем ее в стек
+//             stack.push(openIndex);
+//             continue;
+//         }
+//
+//         closeIndex = close.indexOf(chars[i]);
+//         if (closeIndex !== -1) {
+//             // Нашли закрывающую скобку. Проверяем ее соответствие открывающей
+//             openIndex = stack.pop();
+//             if (closeIndex !== openIndex) {
+//                 return false;
+//             }
+//         }
+//     }
+//
+//     // Проверяем дисбаланс открытых/закрытых скобок
+//     if (stack.length !== 0) {
+//         return false;
+//     }
+//
+//     return true;
+// }
+// console.log(test('([]())[]'))
