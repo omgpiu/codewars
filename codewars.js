@@ -103,3 +103,6 @@
 //     let mY=map.map(v=>v.includes('m')).indexOf(true)+1
 //     return Math.abs(catX-mX)+Math.abs(catY-mY)<=moves?'Caught!':'Escaped!'
 // }
+
+const flatter = arr => arr.reduce((arr, el)=> Array.isArray(el)? flatter([...arr,...el]) : [...arr,el],[])
+console.log(flatter(["a", "b", ["c", "d", ["e", ["f"]]], "g", ["h"]]))
