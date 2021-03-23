@@ -258,3 +258,13 @@
 //     return n == 1? a: b;
 // }
 // console.log(nth_fibonacci(10))
+// function isPalindrome(line) {
+//     return (String(line) == String(line).split('').reverse().join('') )
+//
+// }
+// function isPalindrome(line) {
+//
+//     let a = line.toString().split('').reverse().join('')
+//     return a === line.toString() ? true : false;
+// }
+// console.log(isPalindrome(12321))
