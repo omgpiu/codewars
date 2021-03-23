@@ -236,3 +236,8 @@
 //     return (num+'').split('').map(d=>d.repeat(n)).reduce((a,n)=>a+(+n),0) === num;
 // };
 // console.log(checkConcatenatedSum(198 ,2))
+function FilterString(value) {
+    return +value.replace(/\D/g,'')
+}
+
+console.log(FilterString("aa1bb2cc3dd"))
