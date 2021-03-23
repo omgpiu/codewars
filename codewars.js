@@ -279,4 +279,6 @@
 //     return number % 2 ? 'Odd' : 'Even'
 //
 // }
-//adsfsdfsdfsfsdf
+function a(){
+    return 'hey'
+}
