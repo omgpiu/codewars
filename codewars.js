@@ -268,8 +268,14 @@
 //     return a === line.toString() ? true : false;
 // }
 // console.log(isPalindrome(12321))
-function isAnagram(test, original) {
-    return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
-}
+// function isAnagram(test, original) {
+//     return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
+// }
+//
+// console.log(isAnagram("foefet", "toffee"))
 
-console.log(isAnagram("foefet", "toffee"))
+// function even_or_odd(number) {
+//
+//     return number % 2 ? 'Odd' : 'Even'
+//
+// }
