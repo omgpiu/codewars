@@ -206,5 +206,33 @@
 //     return newArr
 // }
 //
-// console.log(squares(2, 0))
+//
+// function squares(x, n) {
+//     let ret = [];
+//     for(let i=0; i<n; i++){
+//         ret.push(x);
+//         x*= x;
+//     }
+//     return ret;
+// }
+// console.log(squares(2, 5))
 // [2,4,16,256,65536]
+// function checkConcatenatedSum(checkNum, num) {
+//     let array = Math.abs(checkNum).toString().split('')
+//     for (let i = 0; i < array.length; i++) {
+//         array[i] = array[i].repeat(num)
+//     }
+//
+//     let finish = array.reduce((prev, current) => {
+//          return Number(prev) + Number(current)
+//     })
+//     if (+finish === Math.abs(checkNum)) {
+//         return true
+//     }
+//     return false
+// }
+// const checkConcatenatedSum = (num, n) => {
+//     num = Math.abs(num);
+//     return (num+'').split('').map(d=>d.repeat(n)).reduce((a,n)=>a+(+n),0) === num;
+// };
+console.log(checkConcatenatedSum(198 ,2))
