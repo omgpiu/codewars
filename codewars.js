@@ -241,11 +241,20 @@
 // }
 //
 // console.log(FilterString("aa1bb2cc3dd"))
-function nth_fibonacci(n) {
-    if (n === 1) return 0
-    else if (n === 2) return 1
-    return nth_fibonacci(n - 1) + nth_fibonacci(n - 2)
-
-}
-
-console.log(nth_fibonacci(10))
+// function nth_fibonacci(n) {
+//     if (n === 1) return 0
+//     else if (n === 2) return 1
+//     return nth_fibonacci(n - 1) + nth_fibonacci(n - 2)
+//
+// }
+// function nthFibo(n) {
+//     let a = 0, b = 1;
+//
+//     for (let i = 3; i <= n; i++) {
+//         let c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return n == 1? a: b;
+// }
+// console.log(nth_fibonacci(10))
