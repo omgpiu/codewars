@@ -189,6 +189,22 @@
 //     }).join('')
 // }
 //"()()()"
-function squares(x, n) {
-
-}
+// function squares(x, n) {
+//     if (n <= 0) {
+//         return []
+//     }
+//     let array = []
+//     let newArr = [x]
+//     for (let i = 0; i < n; i++) {
+//         array.push(x)
+//
+//     }
+//     array.reduce(function (previousValue, currentValue, index, array) {
+//         newArr.push(Math.pow(previousValue, 2))
+//         return Math.pow(previousValue, 2)
+//     });
+//     return newArr
+// }
+//
+// console.log(squares(2, 0))
+// [2,4,16,256,65536]
