@@ -236,8 +236,16 @@
 //     return (num+'').split('').map(d=>d.repeat(n)).reduce((a,n)=>a+(+n),0) === num;
 // };
 // console.log(checkConcatenatedSum(198 ,2))
-function FilterString(value) {
-    return +value.replace(/\D/g,'')
+// function FilterString(value) {
+//     return +value.replace(/\D/g,'')
+// }
+//
+// console.log(FilterString("aa1bb2cc3dd"))
+function nth_fibonacci(n) {
+    if (n === 1) return 0
+    else if (n === 2) return 1
+    return nth_fibonacci(n - 1) + nth_fibonacci(n - 2)
+
 }
 
-console.log(FilterString("aa1bb2cc3dd"))
+console.log(nth_fibonacci(10))
