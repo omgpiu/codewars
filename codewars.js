@@ -151,3 +151,44 @@
 //     return true;
 // }
 // console.log(test('([]())[]'))
+//
+// function duplicateEncode(word) {
+//     let obj = {}
+//     let letter = word.toLowerCase().split('')
+//     for (let i = 0; i < letter.length; i++) {
+//         let x = letter[i]
+//         if (obj[x] === undefined) {
+//             obj[x] = 1;
+//         } else {
+//             obj[x] += 1
+//         }
+//
+//     }
+//     console.log(obj)
+//     return letter.map(el => {
+//         return obj[el] === 1 ? '(' : ')'
+//     }).join('')
+// }
+// function duplicateEncode(word){
+//     return word
+//         .toLowerCase()
+//         .split('')
+//         .map( function (a, i, w) {
+//             console.log(a)
+//             console.log(w.indexOf(a)+' index')
+//             console.log(w.lastIndexOf(a)+' last index')
+//             return w.indexOf(a) === w.lastIndexOf(a) ? '(' : ')'
+//         })
+//         .join('');
+// }
+// console.log(duplicateEncode("Success"))
+// function duplicateEncode(word) {
+//     let letters = word.toLowerCase().split('')
+//     return letters.map(function(c, i) {
+//         return letters.some(function(x, j) { return x === c && i !== j }) ? ')' : '('
+//     }).join('')
+// }
+//"()()()"
+function squares(x, n) {
+
+}
