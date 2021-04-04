@@ -300,11 +300,26 @@
 // }
 //
 // console.log(factorial(-1))
-function removeEveryOther(arr){
-  return  arr.filter(function(value, index) {
-    return index % 2 === 0;
-  });
+// function removeEveryOther(arr){
+//   return  arr.filter(function(value, index) {
+//     return index % 2 === 0;
+//   });
+//
+// }
+//
+// console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+// find duplicates!!
+// function distinct(a) {
+//   return a.reduce((acc, el, i, arr) => {
+//     if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el);
+//     return acc
+//   }, [])
+// }
 
+// console.log(distinct([1, 2, 3, 1, 3, 1]))
+// Убираем дубликаты
+function  distinct(arr){
+ return arr.filter((e, i, a) => a.indexOf(e) === i) // [1, 2, 3, 4]
 }
 
-console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+console.log(distinct([1, 2, 3, 1, 3, 1]))
