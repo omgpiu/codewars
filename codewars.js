@@ -279,6 +279,32 @@
 //     return number % 2 ? 'Odd' : 'Even'
 //
 // }
-function a(){
-    return 'hey'
+// function mygcd(x,y){
+//     if (!y) {
+//         return x;
+//     }
+//
+//     return mygcd(y, (x % y))
+//
+// }
+//
+// console.log(mygcd(30,12))
+// console.log(mygcd(8,9))
+
+//
+// function factorial(n) {
+//   if (n < (-1) || n > 12) throw RangeError
+//   return  n===0 ? 1:  n*factorial(n-1)
+//
+//
+// }
+//
+// console.log(factorial(-1))
+function removeEveryOther(arr){
+  return  arr.filter(function(value, index) {
+    return index % 2 === 0;
+  });
+
 }
+
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
