@@ -318,8 +318,72 @@
 
 // console.log(distinct([1, 2, 3, 1, 3, 1]))
 // Убираем дубликаты
-function  distinct(arr){
- return arr.filter((e, i, a) => a.indexOf(e) === i) // [1, 2, 3, 4]
-}
+// function  distinct(arr){
+//  return arr.filter((e, i, a) => a.indexOf(e) === i) // [1, 2, 3, 4]
+// }
+//
+// console.log(distinct([1, 2, 3, 1, 3, 1]))
 
-console.log(distinct([1, 2, 3, 1, 3, 1]))
+// function capital(capitals) {
+//   let result =[]
+//     capitals.forEach(el => {
+//       result.push(Object.entries(el).map(e => {
+//         if (e[0] == 'state' || e[0] == 'country') {
+//           return  e[1]
+//         } else {
+//           return e[1]
+//         }
+//       }))
+//       }
+//     )
+//  return result.map(e=>{
+//    return  `The capital of ${e[0]} is ${e[1]}`
+//   })
+//
+// }
+// function capital(capitals){
+//   return capitals.map(({country, state = country, capital}) => `The capital of ${state} is ${capital}`)
+// }
+// // state_capitals = [{ state: 'Maine', capital: 'Augusta' }]
+// // capital(state_capitals)
+//
+// // "The capital of Maine is Augusta"
+//
+// country_capitals = [{ 'country': 'Spain', 'capital': 'Madrid' }]
+// // capital(country_capitals)[0], "The capital of Spain is Madrid"
+//
+// mixed_capitals = [{ 'state': 'Maine', capital: 'Augusta' }, { country: 'Spain', 'capital': 'Madrid' }]
+// // capital(mixed_capitals)[1], "The capital of Spain is Madrid"
+// console.log(capital(mixed_capitals))
+
+// function fizzbuzz(n) {
+//   return Array.from(Array(n), (_, i) => i + 1).map(e => {
+//       if ((e % 5 === 0) && (e % 3 === 0)) {
+//         return 'FizzBuzz'
+//       } else if (e % 5 === 0) {
+//         return 'Buzz'
+//       } else if (e % 3 === 0){
+//         return 'Fizz'
+//       } else {
+//         return e
+//       }
+//     }
+//   )
+//
+//
+// }
+//
+// console.log(fizzbuzz(15))
+// console.log((3 % 5 === 0) && (15 % 3 === 0))
+function findShort(s) {
+
+  return s.split(' ').sort((a, b) => {
+    return a.length - b.length
+  })[0].length
+
+
+}
+function findShort(s) {
+  return s.split(' ').reduce((min, word) => Math.min(min, word.length), Infinity);
+}
+console.log(findShort('bitcoin take over the world maybe who knows perhaps'))
