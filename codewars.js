@@ -418,3 +418,14 @@
 // }
 // const divCon=x=>x.reduce((a,b)=>a+(0+b==b?b:-+b),0)
 // console.log(divCon([9, 3, '7', '3']))
+// function findOdd(array) {
+//   return array.reduce((c, v) =>{
+//
+//     return c ^ v;
+//   }, 0);
+// }
+// findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])
+// //5
+// function findOdd(arr) {
+//   return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+// }
