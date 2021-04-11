@@ -407,3 +407,14 @@
 // }
 // const inter = (s1, s2) => new Set([...s1].filter(x => s2.has(x)))
 // console.log(inter(A,B))
+// function divCon(x){
+//   const newA=x.filter(e=> typeof e === 'string').reduce((acc,el)=>+acc+(+el),0)
+//   const newB=x.filter(e=> typeof e !== 'string').reduce((acc,el)=>acc+el,0)
+//   return newB-newA
+// }
+//
+// function divCon(x){
+//   return x.reduce((acc, cur) => typeof cur === 'number'? acc + cur : acc - Number(cur),0)
+// }
+// const divCon=x=>x.reduce((a,b)=>a+(0+b==b?b:-+b),0)
+// console.log(divCon([9, 3, '7', '3']))
