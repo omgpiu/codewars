@@ -375,15 +375,35 @@
 //
 // console.log(fizzbuzz(15))
 // console.log((3 % 5 === 0) && (15 % 3 === 0))
-function findShort(s) {
-
-  return s.split(' ').sort((a, b) => {
-    return a.length - b.length
-  })[0].length
-
-
-}
-function findShort(s) {
-  return s.split(' ').reduce((min, word) => Math.min(min, word.length), Infinity);
-}
-console.log(findShort('bitcoin take over the world maybe who knows perhaps'))
+// function findShort(s) {
+//
+//   return s.split(' ').sort((a, b) => {
+//     return a.length - b.length
+//   })[0].length
+//
+//
+// }
+// function findShort(s) {
+//   return s.split(' ').reduce((min, word) => Math.min(min, word.length), Infinity);
+// }
+// console.log(findShort('bitcoin take over the world maybe who knows perhaps'))
+// A = new Set([1,2]);
+// B = new Set([2,3]);
+// function inter(s1, s2){
+//  const newSet = [...s1,...s2]
+//   return new Set(newSet.reduce((acc, el, i, arr) => {
+//     if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el);
+//     return acc
+//   }, []))
+//
+// }
+// function inter(s1, s2){
+//   return new Set( [...s1].filter( e => s2.has(e) ) )
+// }
+// function inter(s1, s2){
+//   const firstArr = [...s1];
+//   const secondArr = [...s2];
+//   return new Set(firstArr.filter(elem => secondArr.includes(elem)));
+// }
+// const inter = (s1, s2) => new Set([...s1].filter(x => s2.has(x)))
+// console.log(inter(A,B))
