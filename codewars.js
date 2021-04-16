@@ -469,9 +469,7 @@
 const plus = (a,b) => a+b
 
 function zipWith(fn,a0,a1) {
-
-
-  console.log(result)
+  // функция должна запускаться на каждый тик ( проход по самому короткому массиву)
 
 }
 console.log(zipWith(plus, [0,1,2,3,4,5], [6,5,4,3,2,1]))
