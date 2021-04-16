@@ -279,6 +279,29 @@
 //     return number % 2 ? 'Odd' : 'Even'
 //
 // }
+// function highAndLow(numbers) {
+//     let a = numbers.split(' ').map(e => +e).sort((a, b) => b-a)
+//     return a[0] + ' ' + a[a.length - 1]
+//
+//
+// }
+//
+// highAndLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6")
+//
+// function highestAndLowest(nums) {
+//     let numbers = nums.split(' ');
+//     let sorted = numbers.sort(function (a, b) {
+//         return Number(a) - Number(b);
+//     });
+//     return sorted[0] + " " + sorted[sorted.length - 1];
+// }
+//
+// function squareDigits(num) {
+//     let a = Number(num.toString().split('').map(e => e * e).join(''))
+//     console.log(a)
+// }
+//
+// squareDigits(9119)
 // function mygcd(x,y){
 //     if (!y) {
 //         return x;
@@ -429,3 +452,26 @@
 // function findOdd(arr) {
 //   return arr.find((item, index) => arr.filter(el => el == item).length % 2)
 // }
+// function findOutlier(integers) {
+//   let odd = []
+//   let even = []
+//   integers.forEach(e => e % 2 === 0 ? even.push(e) : odd.push(e))
+//   return odd.length > even.length ? even[0] : odd [0]
+//
+// }
+// function findOutlier(int){
+//   const even = int.filter(a=>a%2==0);
+//   const odd = int.filter(a=>a%2!==0);
+//   return even.length==1? even[0] : odd[0];
+// }
+// console.log(findOutlier([6, 8, 0, 1]))
+
+const plus = (a,b) => a+b
+
+function zipWith(fn,a0,a1) {
+
+
+  console.log(result)
+
+}
+console.log(zipWith(plus, [0,1,2,3,4,5], [6,5,4,3,2,1]))
