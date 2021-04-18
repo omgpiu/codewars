@@ -465,11 +465,69 @@
 //   return even.length==1? even[0] : odd[0];
 // }
 // console.log(findOutlier([6, 8, 0, 1]))
+//
+// const plus = (a, b) => a + b
+//
+// function zipWith(fn, a0, a1) {
+//   const short = Math.min(a0.length, a1.length);
+//   let newArr = []
+//   for (let i = 0; i < short; i++) {
+//      newArr.push(fn(a0[i], a1[i]))
+//
+//   }
+//   return newArr
+// }
+// function zipWith(f,A=[],B=[]) {
+//   var smaller = B.length > A.length ? A : B
+//   return smaller.map( (v,i,RA)=> f(A[i],B[i]) )
+// }
+// console.log(zipWith(plus, [0, 1, 2, 3, 4, 5], [6, 5, 4, 3, 2, 1]))
 
-const plus = (a,b) => a+b
-
-function zipWith(fn,a0,a1) {
-  // функция должна запускаться на каждый тик ( проход по самому короткому массиву)
-
-}
-console.log(zipWith(plus, [0,1,2,3,4,5], [6,5,4,3,2,1]))
+// function starSign(date) {
+//   const day = date.getDate();
+//
+//   switch(date.getMonth()){
+//     case 0:  return day < 21 ? "Capricorn" : "Aquarius";
+//     case 1:  return day < 20 ? "Aquarius" : "Pisces";
+//     case 2:  return day < 21 ? "Pisces" : "Aries";
+//     case 3:  return day < 21 ? "Aries" : "Taurus";
+//     case 4:  return day < 22 ? "Taurus" : "Gemini";
+//     case 5:  return day < 22 ? "Gemini" : "Cancer";
+//     case 6:  return day < 23 ? "Cancer" : "Leo";
+//     case 7:  return day < 24 ? "Leo" : "Virgo";
+//     case 8:  return day < 24 ? "Virgo" : "Libra";
+//     case 9:  return day < 24 ? "Libra" : "Scorpio";
+//     case 10: return day < 23 ? "Scorpio" : "Sagittarius";
+//     case 11: return day < 22 ? "Sagittarius" : "Capricorn";
+//   }
+// }
+//
+//
+// // Aquarius ------ 21 January - 19 February
+// // Pisces --------- 20 February - 20 March
+// // Aries ---------- 21 March - 20 April
+// // Taurus -------- 21 April - 21 May
+// // Gemini -------- 22 May - 21 June
+// // Cancer -------- 22 June - 22 July
+// // Leo ------------- 23 July - 23 August
+// // Virgo ----------- 24 August - 23 September
+// // Libra ----------- 24 September - 23 October
+// // Scorpio -------- 24 October - 22 November
+// // Sagittarius ---- 23 November - 21 December
+// // Capricorn ----- 22 December - 20 January
+// console.log(starSign(new Date(1970, 5, 5)))
+// function fridayTheThirteenths(start, end) {
+//
+//
+//
+//   function req(value,n=12){
+//
+//   }
+//
+//
+//
+// }
+//
+// console.log(new Date(98, 1 ))
+// let date = new Date(1999, 7,13 ).toDateString()
+// console.log(date)
