@@ -542,10 +542,15 @@
 function count(array) {
 
   return array.reduce((count, word) => {
+    console.log(count, 'before count')
+    console.log(word, 'before word')
+    debugger
     count[word] = count[word] ? count[word] + 1 : 1
+    console.log(count, 'after count')
+    console.log(word, 'after word')
     return count
-  },{})
+  }, {})
 }
 
-console.log(count(['james', 'james', 'john']))
+console.log(count(['james', 'james', 'john','james', 'james', 'john','james', 'james', 'john','james', 'james', 'john']))
 
