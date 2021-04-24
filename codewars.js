@@ -516,18 +516,26 @@
 // // Sagittarius ---- 23 November - 21 December
 // // Capricorn ----- 22 December - 20 January
 // console.log(starSign(new Date(1970, 5, 5)))
-// function fridayTheThirteenths(start, end) {
-//
-//
-//
-//   function req(value,n=12){
-//
-//   }
-//
-//
-//
-// }
-//
-// console.log(new Date(98, 1 ))
-// let date = new Date(1999, 7,13 ).toDateString()
+function fridayTheThirteenths(start, end) {
+  end = end || start
+  let result = []
+  let months = [...Array(12).keys()]
+  let years = [...Array(end - start + 1)].map((_, i) => start + i)
+
+  years.forEach(year => {
+    months.forEach(month => {
+      let date = new Date(year, month, 13)
+      if (date.getDay() === 5)
+        result.push((1 + month) + '/13/' + year)
+    })
+  })
+
+  return result.join(' ')
+}
+
+console.log(fridayTheThirteenths(1981))
+// let date = new Date(1999, 7, 13).toDateString()
+// let newDate = date.split(' ')
 // console.log(date)
+// console.log(newDate)
+// console.dir(date)
