@@ -565,3 +565,11 @@
 // // console.log(killer({'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']))
 // console.log(killer({ 'Brad': [], 'Megan': ['Ben', 'Kevin'], 'Finn': [] }, ['Ben']))
 // //James
+// function validPass(password){
+//   const reg = /^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]){4,20}$/
+//  return  password.match(reg) ?  'VALID' : 'INVALID'
+//
+// }
+// function validPass(password){
+//   return /(?=.+[a-z])(?=.+\d)^[a-z\d]{3,20}$/i.test(password) ? 'VALID' : 'INVALID';
+// }
