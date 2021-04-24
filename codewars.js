@@ -539,18 +539,29 @@
 // console.log(date)
 // console.log(newDate)
 // console.dir(date)
-function count(array) {
+// function count(array) {
+//
+//   return array.reduce((count, word) => {
+//     console.log(count, 'before count')
+//     console.log(word, 'before word')
+//     debugger
+//     count[word] = count[word] ? count[word] + 1 : 1
+//     console.log(count, 'after count')
+//     console.log(word, 'after word')
+//     return count
+//   }, {})
+// }
+//
+// console.log(count(['james', 'james', 'john','james', 'james', 'john','james', 'james', 'john','james', 'james', 'john']))
 
-  return array.reduce((count, word) => {
-    console.log(count, 'before count')
-    console.log(word, 'before word')
-    debugger
-    count[word] = count[word] ? count[word] + 1 : 1
-    console.log(count, 'after count')
-    console.log(word, 'after word')
-    return count
-  }, {})
-}
-
-console.log(count(['james', 'james', 'john','james', 'james', 'john','james', 'james', 'john','james', 'james', 'john']))
-
+//
+// function killer(suspectInfo, dead) {
+//   for (let person in suspectInfo) {
+//     if (suspectInfo[person].some(killed => dead.includes(killed))) return person;
+//   }
+// }
+//
+//
+// // console.log(killer({'James': ['Jacob', 'Bill', 'Lucas'], 'Johnny': ['David', 'Kyle', 'Lucas'], 'Peter': ['Lucy', 'Kyle']}, ['Lucas', 'Bill']))
+// console.log(killer({ 'Brad': [], 'Megan': ['Ben', 'Kevin'], 'Finn': [] }, ['Ben']))
+// //James
