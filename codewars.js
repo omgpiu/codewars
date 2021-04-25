@@ -573,3 +573,9 @@
 // function validPass(password){
 //   return /(?=.+[a-z])(?=.+\d)^[a-z\d]{3,20}$/i.test(password) ? 'VALID' : 'INVALID';
 // }
+// function getCount(str) {
+//   return str.split('').filter(e=>e.match(/^[aeiou]+$/)).length
+// }
+//
+// console.log(getCount('abracadabra'))
+// //result 5
