@@ -579,3 +579,26 @@
 //
 // console.log(getCount('abracadabra'))
 // //result 5
+// function solution(number) {
+//   let newArrr = Array.from({ length: number-1 }, (v, k) => k + 1)
+//   let secondArr = newArrr.map(e => {
+//       if ((e % 5 === 0) && (e % 3 === 0)) {
+//
+//         return e
+//       } else if (e % 5 === 0) {
+//         return  e
+//       } else if (e % 3 === 0) {
+//         return e
+//       } else {
+//         return 0
+//       }
+//     }
+//   )
+//
+//
+//
+//   return console.log(secondArr.reduce((acc,num)=>acc+num,0))
+// }
+//
+// console.log(solution(50))
+// //result 23
