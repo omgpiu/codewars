@@ -602,3 +602,18 @@
 //
 // console.log(solution(50))
 // //result 23
+let moveZeros = function (arr) {
+  let zeros = []
+  let numbers = []
+  arr.forEach(e => {
+    if (e === 0) {
+      zeros.push(e)
+    } else {
+      numbers.push(e)
+    }
+  })
+
+return  numbers.concat(zeros)
+}
+console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]))
+//moveZeros([1,2,0,1,0,1,0,3,0,1]
