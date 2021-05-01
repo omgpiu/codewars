@@ -594,11 +594,16 @@
 //       }
 //     }
 //   )
-//
-//
-//
 //   return console.log(secondArr.reduce((acc,num)=>acc+num,0))
 // }
 //
 // console.log(solution(50))
 // //result 23
+function countString(string) {
+  return string.split('').reduce((count, word) => {
+    count[word] = count[word] ? count[word] + 1 : 1
+    return count
+  }, {})
+}
+console.log(countString("aba"))
+console.log(countString(""))
