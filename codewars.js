@@ -602,6 +602,20 @@
 //
 // console.log(solution(50))
 // //result 23
+//Сорртировка по количеству повторений в массиве
+// function count(array) {
+//   return array.reduce((count, word) => {
+
+//     count[word] = count[word] ? count[word] + 1 : 1
+//     return count
+//   }, {})
+// }
+// const list = count(['orange', 'orange', 'orange', 'orange', 'banana', 'banana', 'banana', 'apple', 'apple', 'apple', 'apple', 'apple', 'apple', 'milk'])
+// const keysSorted = Object.keys(list)
+//   .sort((a, b) => list[a] - list[b])
+
+
+
 function countString(string) {
   return string.split('').reduce((count, word) => {
     count[word] = count[word] ? count[word] + 1 : 1
