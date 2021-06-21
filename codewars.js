@@ -614,28 +614,77 @@
 // const keysSorted = Object.keys(list)
 //   .sort((a, b) => list[a] - list[b])
 
+//
+//
+// function countString(string) {
+//   return string.split('').reduce((count, word) => {
+//     count[word] = count[word] ? count[word] + 1 : 1
+//     return count
+//   }, {})
+// }
+// console.log(countString("aba"))
+// console.log(countString(""))
+//
+// let moveZeros = function (arr) {
+//   let zeros = []
+//   let numbers = []
+//   arr.forEach(e => {
+//     if (e === 0) {
+//       zeros.push(e)
+//     } else {
+//       numbers.push(e)
+//     }
+//   })
+// return  numbers.concat(zeros)
+// }
+// console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]))
+// //moveZeros([1,2,0,1,0,1,0,3,0,1]
+// Найти квадратное число
+// function isSquare(n) {
+//   return Math.sqrt(n) % 1 === 0;
+// }
+// const isSquare = n => Number.isInteger(Math.sqrt(n));
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+//
+//   You may assume that each input would have exactly one solution, and you may not use the same element twice.
+//
+//   You can return the answer in any order.
+//
+//
+//
+//   Example 1:
+//
+// Input: nums = [2,7,11,15], target = 9
+// Output: [0,1]
+// Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+// const twoSum = function(nums, target) {
+//   for(let i =0;i<nums.length;i++){
+//     for(let j=i+1; j<nums.length;j++){
+//       if(nums[j]===target-nums[i]){
+//         return [i,j]
+//       }
+//     }
+//   }
+// };
+// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+//НЕ РЕШИЛ
+// Return the running sum of nums.
+// let runningSum = function (nums) {
+//   let newArr = []
+//   for (let i = 0; i <nums.length; i++) {
+//
+//   return newArr
+// }}
+// console.log(runningSum([3,1,2,10,1]))
 
+// Description:
+//   Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+  // function XO(str) {
+//   let lower = str.toLowerCase().split('')
+//   let x = lower.filter(e=>e==='x').length
+//   let o = lower.filter(e=>e==='o').length
+//   return  (x-o)===0
+//
+// }
 
-function countString(string) {
-  return string.split('').reduce((count, word) => {
-    count[word] = count[word] ? count[word] + 1 : 1
-    return count
-  }, {})
-}
-console.log(countString("aba"))
-console.log(countString(""))
-
-let moveZeros = function (arr) {
-  let zeros = []
-  let numbers = []
-  arr.forEach(e => {
-    if (e === 0) {
-      zeros.push(e)
-    } else {
-      numbers.push(e)
-    }
-  })
-return  numbers.concat(zeros)
-}
-console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]))
-//moveZeros([1,2,0,1,0,1,0,3,0,1]
+console.log(XO("xxOo"))
