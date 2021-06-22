@@ -679,7 +679,7 @@
 
 // Description:
 //   Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
-  // function XO(str) {
+// function XO(str) {
 //   let lower = str.toLowerCase().split('')
 //   let x = lower.filter(e=>e==='x').length
 //   let o = lower.filter(e=>e==='o').length
@@ -687,4 +687,25 @@
 //
 // }
 
-console.log(XO("xxOo"))
+// console.log(XO("xxOo"))
+// Jaden Casing Strings
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+// String.prototype.toJadenCase = function () {
+//   let fistStep = this.split(' ').map(e => {
+//     let b = e.slice(1)
+//     return [e[0].toUpperCase(), ...b]
+//   })
+//   return fistStep.map(e => e.join('')).join(' ')
+//
+// };
+// String.prototype.toJadenCase = function() {
+//   return this.split(' ').map(item => item[0].toUpperCase() + item.slice(1)).join(' ')
+// };
+// String.prototype.toJadenCase = function () {
+//   return this.split(" ").map(function(word){
+//     return word.charAt(0).toUpperCase() + word.slice(1);
+//   }).join(" ");
+// }
+// var str = "How can mirrors be real if our eyes aren't real"
+// str.toJadenCase()
