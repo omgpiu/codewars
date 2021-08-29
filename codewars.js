@@ -602,6 +602,29 @@
 //
 // console.log(solution(50))
 // //result 23
+// function countString(string) {
+//   return string.split('').reduce((count, word) => {
+//     count[word] = count[word] ? count[word] + 1 : 1
+//     return count
+//   }, {})
+// }
+// console.log(countString("aba"))
+// console.log(countString(""))
+//
+// let moveZeros = function (arr) {
+//   let zeros = []
+//   let numbers = []
+//   arr.forEach(e => {
+//     if (e === 0) {
+//       zeros.push(e)
+//     } else {
+//       numbers.push(e)
+//     }
+//   })
+// return  numbers.concat(zeros)
+// }
+// console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]))
+// //moveZeros([1,2,0,1,0,1,0,3,0,1]
 //Сорртировка по количеству повторений в массиве
 // function count(array) {
 //   return array.reduce((count, word) => {
@@ -639,19 +662,20 @@
 // }
 // console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1]))
 // //moveZeros([1,2,0,1,0,1,0,3,0,1]
+
 // Найти квадратное число
+
 // function isSquare(n) {
 //   return Math.sqrt(n) % 1 === 0;
 // }
 // const isSquare = n => Number.isInteger(Math.sqrt(n));
+
+//LEETCODE
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 //
 //   You may assume that each input would have exactly one solution, and you may not use the same element twice.
 //
 //   You can return the answer in any order.
-//
-//
-//
 //   Example 1:
 //
 // Input: nums = [2,7,11,15], target = 9
@@ -666,16 +690,7 @@
 //     }
 //   }
 // };
-// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
-//НЕ РЕШИЛ
-// Return the running sum of nums.
-// let runningSum = function (nums) {
-//   let newArr = []
-//   for (let i = 0; i <nums.length; i++) {
-//
-//   return newArr
-// }}
-// console.log(runningSum([3,1,2,10,1]))
+
 
 // Description:
 //   Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
@@ -686,9 +701,10 @@
 //   return  (x-o)===0
 //
 // }
-
 // console.log(XO("xxOo"))
+
 // Jaden Casing Strings
+
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 // String.prototype.toJadenCase = function () {
@@ -709,3 +725,82 @@
 // }
 // var str = "How can mirrors be real if our eyes aren't real"
 // str.toJadenCase()
+
+//НЕ РЕШИЛ
+// Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+// Return the running sum of nums.
+// let runningSum = function (nums) {
+//   let newArr = []
+//   for (let i = 0; i <nums.length; i++) {
+//
+//   return newArr
+// }}
+// console.log(runningSum([3,1,2,10,1]))
+
+//<------------------------------------------------------------------>>
+// Task.
+
+// Calculate area of given triangle.
+// Create a function t_area that will take a string which will represent triangle, find area of the triangle,
+// one space will be equal to one length unit. The smallest triangle will have one length unit.
+// function tArea(tStr) {
+//   let split = tStr.split('\n')
+//   let A = split.length - 3
+//   let B = split[split.length - 2].split(' ').length - 1
+//   return (A * B) / 2
+// }
+//
+// function tArea(tStr) {
+//   let count = 0;
+//   for (let i = 0; i < tStr.length; i++) {
+//     if (tStr[i] === '\n') count++;
+//   }
+//   const area = ((count - 2) ** 2) / 2;.
+//   return area;
+// }
+//<------------------------------------------------------------------>>
+//<------------------------------------------------------------------>>
+// Task
+// You've just moved into a perfectly straight street with exactly n identical houses on either side ' +
+// 'of the road. Naturally, you would like to find out the house number of the people on the other side' +
+// ' of the street. The street looks something like this:
+// https://www.codewars.com/kata/5f0ed36164f2bc00283aed07 Over The Road.
+// let hodd = (r,n) => 1 + (r-1)*2; // house odd.
+// let heven = (r,n) => 2*n - (r-1)*2; // house even.
+// let rodd = (h,n) => (h+1)/2; // row for odd house.
+// let reven = (h,n) => (2*n+2-h)/2; //row for even house.
+//
+// let overTheRoad = (h, n) => {
+//   //console.log("Start",h,n);
+//   if(0 == n%2){
+//     var r = reven(h,n);
+//     var ans = hodd(r,n);
+//     //console.log(`Even house ${h} and row us ${r}, next house is ${ans}.`);
+//     return ans;
+//   }
+//   var r = rodd(h,n);
+//   var ans = heven(r,n);
+//   //console.log(`Odd house ${h} and row us ${r}, next house is ${ans}.`);
+//   return ans;
+// }
+// function overTheRoad(address, n){
+//   var maximumPlusMinimum = n * 2 + 1;  // maximum adress is double n // the opposing of Maximum is always 1
+//   // adress + opposingAddress = n * 2 + 1
+//   // the opposite address is the maximumPlusMinimum minus your address
+//   return maximumPlusMinimum - address;
+// }
+//<------------------------------------------------------------------>>
+//<------------------------------------------------------------------>>
+// var myList = [];
+// for(let i=0; i<5;i++){
+//   let firstElem = myList.length+'Chocko'
+//   myList.push([firstElem,i])
+// }
+// console.log(myList)
+function solution(str, ending){
+  if(ending==='') return false
+  return str.split('').splice(-ending.length).join('')===ending
+
+}
+
+console.log(solution('abc',''))
