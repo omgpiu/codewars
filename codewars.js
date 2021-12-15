@@ -881,3 +881,69 @@
 // App = MyReact.render(Counter) // render: { count: 0 }
 // App.click()
 // App = MyReact.render(Counter) // render: { count: 1 }
+
+// <---- 6 kyu  Create Phone Number ---->
+// function createPhoneNumber(numbers) {
+//   const resultedNumber = ['(']
+//   numbers.forEach((e, index) => {
+//     if (index === 2) {
+//       resultedNumber.push(`${e}`)
+//       resultedNumber.push(')')
+//       resultedNumber.push(' ')
+//     } else if (index === 6) {
+//       resultedNumber.push('-')
+//       resultedNumber.push(`${e}`)
+//     } else {
+//       resultedNumber.push(`${e}`)
+//     }
+//   })
+//   return resultedNumber.join('')
+// }
+//
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+
+//Who likes it?
+// function likes(names) {
+//   let nameStr = 'name, name'
+//   let schema = ' and name like this'
+//   switch (names.length) {
+//     case 0 : {
+//       return 'no one likes this'
+//     }
+//     case 1 : {
+//       return names[0] + ' likes this'
+//     }
+//
+//     case 2: {
+//       schema = 'name' + schema
+//       break
+//     }
+//     case 3: {
+//       schema = nameStr + schema
+//       break
+//     }
+//     default: {
+//       schema = nameStr + ` and ${names.length - 2} others like this`
+//     }
+//   }
+//   return names.reduce((name, second) => name.replace('name', second), schema)
+//
+// }
+//
+// console.log('likes([\'Jacob\', \'Alex\']): ', likes(['Jacob', 'Alex']))
+// console.log('likes([\'Jacob\', \'Alex\']): ', likes(['Alex', 'Jacob', 'Mark', 'Max', 'Mark', 'Max']))
+// console.log('likes([\'Jacob\', \'Alex\']): ', likes(['Max', 'John', 'Mark']))
+
+// Stop gninnipS My sdroW!
+// function spinWords(string) {
+//   const splitedStrind = string.split(' ')
+//   return splitedStrind.map(e => {
+//     if (e.length > 4) {
+//
+//       return e.split('').reverse().join('')
+//     }
+//     return e
+//   }).join(' ')
+// }
+//
+// console.log(spinWords('Welcome'))
