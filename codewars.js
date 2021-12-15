@@ -797,10 +797,87 @@
 //   myList.push([firstElem,i])
 // }
 // console.log(myList)
-function solution(str, ending){
-  if(ending==='') return false
-  return str.split('').splice(-ending.length).join('')===ending
+// function solution(str, ending){
+//   if(ending==='') return false
+//   return str.split('').splice(-ending.length).join('')===ending
+//
+// }
+//
+// console.log(solution('abc',''))
 
-}
+// const flatter = arr => arr.reduce((arr, el) => Array.isArray(el) ? flatter([...arr, ...el]) : [...arr, el], [])
+//
+//
+// const newArr = []
+// const externalArray = [
+//   {
+//     1: [
+//       { quantity: 1, descr: 'blahblahblah' },
+//       { quantity: 10, descr: 'blah3blah3blah' }
+//     ]
+//   },
+//   {
+//     2: [
+//       { quantity: 3, descr: 'blahblahblah2' }
+//     ]
+//   }
+// ]
+// externalArray.forEach(e => {
+//   newArr.push(Object.values(e))
+// })
+//
+// const flattedArray = newArr.flat().flat()
+// const count = flattedArray.reduce((acc, curr) => acc + curr.quantity, 0)
+// console.log('count: ', count)//14
 
-console.log(solution('abc',''))
+// console.log(newArr)
+// Example 0
+//
+// function useState(initialValue) {
+//   var _val = initialValue
+//
+//   function state() {
+//     return _val // state() uses _val, declared by parent funciton
+//   }
+//
+//   function setState(newVal) {
+//
+//     _val = newVal
+//   }
+//
+//   return [state, setState] // exposing functions for external use
+// }
+//
+// var [foo, setFoo] = useState(0) // using array destructuring
+// console.log(foo()) // logs 0 - the initialValue we gave
+// setFoo(1) // sets _val inside useState's scope
+// console.log(foo()) // logs 1 - new initialValue, despite exact same call
+//
+// const MyReact = (function () {
+//   let _val // hold our state in module scope
+//   return {
+//     render(Component) {
+//       const Comp = Component()
+//       Comp.render()
+//       return Comp
+//     },
+//     useState(initialValue) {
+//       _val = _val || initialValue // assign anew every run
+//       function setState(newVal) {
+//         _val = newVal
+//       }
+//       return [_val, setState]
+//     }
+//   }
+// })()
+// function Counter() {
+//   const [count, setCount] = MyReact.useState(0)
+//   return {
+//     click: () => setCount(count + 1),
+//     render: () => console.log('render:', { count })
+//   }
+// }
+// let App
+// App = MyReact.render(Counter) // render: { count: 0 }
+// App.click()
+// App = MyReact.render(Counter) // render: { count: 1 }
