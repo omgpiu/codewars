@@ -956,19 +956,19 @@
 // "Задача функции - за оптимальное время найти ошибку и вернуть исправленный массив,
 // который будет уже идеально отсортирован (сам массив как аргумент функции можно менять, он мутабелен)"
 // const aarr1 = [
+//   { name: '0', success: true },
 //   { name: '1', success: true },
 //   { name: '2', success: true },
 //   { name: '3', success: true },
-//   { name: '4', success: false },
+//   { name: '4', success: true },
 //   { name: '5', success: true },
 //   { name: '6', success: true },
 //   { name: '7', success: true },
 //   { name: '8', success: true },
-//   { name: '9', success: true },
-//   { name: '11', success: true },
+//   { name: '991', success: true },
 //   { name: '12', success: false },
 //   { name: '13', success: false },
-//   { name: '14', success: false },
+//   { name: '14', success: true },
 //   { name: '15', success: false },
 //   { name: 'true', success: false },
 //   { name: '116', success: false },
@@ -978,9 +978,9 @@
 //   { name: '5555', success: false },
 //
 // ]
-// const func = (aarr) => {
-//   const elem = [...aarr]
-//   const firstPart = elem.splice(0, aarr.length / 2)
+// const func = (elem) => {
+//
+//   const firstPart = elem.splice(0, elem.length / 2)
 //
 //   if (firstPart.every(e => e.success === true)) {
 //     const idx = elem.findIndex(e => {
@@ -1000,3 +1000,61 @@
 //   return firstPart.concat(elem)
 // }
 // console.log(func(aarr1))
+// const func = (elem) => {
+//   let idx1
+//   if (elem[0].success !== elem[1].success) {
+//     if (elem[2].success !== elem[0].success) {
+//       elem[0].success = elem[2].success
+//     } else {
+//       elem[1].success = elem[2].success
+//     }
+//   }
+//
+//   if (elem[elem.length - 1].success !== elem[elem.length - 2]) {
+//     if (elem[elem.length - 1].success !== elem[elem.length - 3].success) {
+//       elem[elem.length - 1].success = elem[elem.length - 3].success
+//     } else {
+//       elem[elem.length - 2].success = elem[elem.length - 3].success
+//     }
+//   }
+//   elem.some((e, idx) => {
+//     if (idx > 1 && !((elem.length - 1) === idx)) {
+//       if ((elem[idx - 1].success === elem[idx + 1].success) && elem[idx - 1].success !== elem[idx].success) {
+//         idx1 = idx
+//       }
+//     }
+//   })
+//   elem[idx1].success = !elem[idx1].success
+//   return elem
+// }
+// console.log(func(aarr1))
+// Prime Factors
+// prime_factors = function (n) {
+//   let numbers = []
+//   if (n === 1 || n === 3 || n === 5 || n === 7) return []
+//
+//   const recurs = (num) => {
+//     if (num === 1 || num === 0) return
+//     if (num === 3 || num === 5 || num === 7) {
+//       numbers.push(num)
+//       return;
+//     }
+//
+//     if (num % 2 === 0) {
+//       numbers.push(2)
+//       recurs(num / 2)
+//     } else if (num % 3 === 0) {
+//       numbers.push(3)
+//       recurs(num / 3)
+//     } else {
+//       numbers.push(num)
+//       return;
+//     }
+//   }
+//   recurs(n)
+//   return numbers
+// };
+//
+//
+// console.log(prime_factors(11020332));
+
