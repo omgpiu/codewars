@@ -947,3 +947,56 @@
 // }
 //
 // console.log(spinWords('Welcome'))
+
+// "Нужно решить небольшую задачу. " +
+// "Написать функцию fix(arr: {name: string; success: boolean}[]):" +
+// " {name: string; success: boolean}[] которая на вход принимает массив из студентов." +
+// " Каждый студент - это имя (name) и отметка - сдал он экзамен или нет (success). Размер массива ~миллион элементов. " +
+// "Массив отсортирован по полю success (сначала идут все сдавшие студенты, потом все несдавшие) за исключением одной ошибки. " +
+// "Задача функции - за оптимальное время найти ошибку и вернуть исправленный массив,
+// который будет уже идеально отсортирован (сам массив как аргумент функции можно менять, он мутабелен)"
+// const aarr1 = [
+//   { name: '1', success: true },
+//   { name: '2', success: true },
+//   { name: '3', success: true },
+//   { name: '4', success: false },
+//   { name: '5', success: true },
+//   { name: '6', success: true },
+//   { name: '7', success: true },
+//   { name: '8', success: true },
+//   { name: '9', success: true },
+//   { name: '11', success: true },
+//   { name: '12', success: false },
+//   { name: '13', success: false },
+//   { name: '14', success: false },
+//   { name: '15', success: false },
+//   { name: 'true', success: false },
+//   { name: '116', success: false },
+//   { name: '1116', success: false },
+//   { name: '1116', success: false },
+//   { name: '123123', success: false },
+//   { name: '5555', success: false },
+//
+// ]
+// const func = (aarr) => {
+//   const elem = [...aarr]
+//   const firstPart = elem.splice(0, aarr.length / 2)
+//
+//   if (firstPart.every(e => e.success === true)) {
+//     const idx = elem.findIndex(e => {
+//       if (e.success) {
+//         return e
+//       }
+//     })
+//     elem[idx] = { ...elem[idx], success: false }
+//   } else {
+//     const idx = firstPart.findIndex(e => {
+//       if (!e.success) {
+//         return e
+//       }
+//     })
+//     firstPart[idx] = { ...elem[idx], success: true }
+//   }
+//   return firstPart.concat(elem)
+// }
+// console.log(func(aarr1))
